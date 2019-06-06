@@ -1,3 +1,10 @@
 baseURL      = "http://example.org/"
-title        = "Lingua Pupuli Services"
+title        = "Puppet VSCode Extension"
 languageCode = "en-us"
+sectionPagesMenu = "main"
+
+[params]
+  subtitle     = "An open-source extension for Visual Studio Code"
+  extensionURL = '//pup.pt/vscode'
+  github       = '//github.com/lingua-pupuli/puppet-vscode'
+  twitter      = '//twitter.com/puppetize'
