@@ -1,2 +1,19 @@
 {{ define "main" }}
+<div class="container mt-5">
+  <div class="row">
+    <h1 class="display-3" id="title">{{ .Title }}</h1>
+  </div>
+  <div class="row">
+    <section id="main" class="col-10">
+      <div>
+        <article id="content">
+          {{ .Content }}
+        </article>
+      </div>
+    </section>
+    <aside id="meta" class="col-2">
+      {{ .TableOfContents }}
+    </aside>
+  </div>
+</div>
 {{ end }}

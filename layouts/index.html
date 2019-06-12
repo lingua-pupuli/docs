@@ -1,8 +1,113 @@
 {{ define "main" }}
-<div class="jumbotron jumbotron-fluid text-center">
-  <h1 class="display-3">{{ .Site.Title }}</h1>
+<div class="jumbotron jumbotron-fluid p-4 p-md-5 bg-dark text-white">
+  <div class="row">
+    <div class="col-md-4 copy">
+      <h1>Code editing. <strong>Redefined.</strong></h1>
+      <div class="lead">
+        <p>
+          <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+            <span itemprop="description">Free</span>.
+            <meta itemprop="price" content="0" />
+            <meta itemprop="priceCurrency" content="USD" />
+          </span> Built on open source. Runs everywhere.</p>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <img src="{{ "img/auto_complete.gif" | absURL }}" class="img-thumbnail">
+    </div>
+  </div>
 </div>
+
+
 <div class="container">
-  <h1 class="display-3">Hello, world!</h1>
+  <div class="row">
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="card-deck mb-5">
+        <div class="card">
+          <div class="d-flex justify-content-center">
+            <span class="fa-stack fa-3x m-2" title="Intellisense">
+              <i class="fas fa-circle fa-stack-2x text-warning"></i>
+              <i class="fas fa-magic fa-stack-1x fa-inverse"></i>
+              <span class="sr-only">Intellisense</span>
+            </span>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title text-center" style="color: #ffae1a">Intellisense</h5>
+            <p class="card-text text-center">Live intellisense of the Puppet Custom Types, Functions, Classes and
+              Defined Types</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="d-flex justify-content-center">
+            <span class="fa-stack fa-3x m-2" title="Code Navigation">
+              <i class="fas fa-circle fa-stack-2x text-warning"></i>
+              <i class="fas fa-road fa-stack-1x fa-inverse"></i>
+              <span class="sr-only">Code Navigation</span>
+            </span>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title text-center" style="color: #ffae1a">Code Navigation</h5>
+            <p class="card-text text-center">The power of an IDE and the speed of a text editor</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="d-flex justify-content-center">
+            <span class="fa-stack fa-3x m-2" title="Linting">
+              <i class="fas fa-circle fa-stack-2x text-warning"></i>
+              <i class="fas fa-flask fa-stack-1x fa-inverse"></i>
+              <span class="sr-only">Linting</span>
+            </span>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title text-center" style="color: #ffae1a">Linting</h5>
+            <p class="card-text text-center">As you type puppet-lint checking integrated into the Problems Pane</p>
+          </div>
+        </div>
+      </div>
+      <div class="card-deck mb-5">
+        <div class="card">
+          <div class="d-flex justify-content-center">
+            <span class="fa-stack fa-3x m-2" title="Puppet Commands">
+              <i class="fas fa-circle fa-stack-2x text-warning"></i>
+              <i class="fas fa-project-diagram fa-stack-1x fa-inverse"></i>
+              <span class="sr-only">Puppet Commands</span>
+            </span>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title text-center" style="color: #ffae1a">Puppet Commands</h5>
+            <p class="card-text text-center">Use Puppet commands from within VSCode</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="d-flex justify-content-center">
+            <span class="fa-stack fa-3x m-2" title="Puppet Development Kit">
+              <i class="fas fa-circle fa-stack-2x text-warning"></i>
+              <i class="fas fa-code fa-stack-1x fa-inverse"></i>
+              <span class="sr-only">Puppet Development Kit</span>
+            </span>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title text-center" style="color: #ffae1a">Puppet Development Kit</h5>
+            <p class="card-text text-center">Built in PDK commands</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="d-flex justify-content-center">
+            <span class="fa-stack fa-3x m-2" title="Remote Development">
+              <i class="fas fa-circle fa-stack-2x text-warning"></i>
+              <i class="fas fa-broadcast-tower fa-stack-1x fa-inverse"></i>
+              <span class="sr-only">Remote Development</span>
+            </span>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title text-center" style="color: #ffae1a">Remote Development</h5>
+            <p class="card-text text-center">Develop in Docker, WSL, or SSH</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 {{ end }}

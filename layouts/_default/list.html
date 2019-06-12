@@ -1,2 +1,15 @@
 {{ define "main" }}
+<main class="container">
+  <article>
+    <header>
+      <h1 class="display-3">{{.Title}}</h1>
+    </header>
+    {{.Content}}
+  </article>
+  <ul class="list-group">
+    {{ range .Pages }}
+    <a class="list-group-item" href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a>
+    {{ end }}
+  </ul>
+</main>
 {{ end }}

@@ -1,35 +1,58 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="{{ .Site.BaseURL | absLangURL }}">
+    <svg width="32px" height="32px" viewBox="0 0 100 154" version="1.1" xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink">
+      <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g id="dep" transform="translate(4.000000, 6.000000)" fill="#EFA732">
+            <g id="Page-1">
+              <path
+                d="M15.191,138.231 L30.382,138.231 L30.382,123.039 L15.191,123.039 L15.191,138.231 Z M15.192,31.174 L30.382,31.174 L30.382,15.984 L15.192,15.984 L15.192,31.174 Z M99.124,99.894 L99.124,54.32 L64.27,54.32 L64.281,54.309 L45.574,35.602 L45.574,0.792 L0,0.792 L0,46.366 L34.854,46.366 L53.539,65.051 L53.55,65.04 L53.55,89.174 L53.528,89.152 L34.832,107.848 L0,107.848 L0,153.422 L45.574,153.422 L45.574,118.59 L64.27,99.894 L99.124,99.894 L99.124,99.894 Z"
+                id="Shape" />
+            </g>
+          </g>
+        </g>
+      </g>
+    </svg>
+    Puppet Extension
+  </a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
+      {{ $currentPage := . }}
+      {{ range .Site.Menus.main }}
+      {{ if .HasChildren }}
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          {{ .Pre }} {{ .Name }}
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
+          {{ range .Children }}
+          <a class="dropdown-item" href="{{ .URL }}">{{ .Name }}</a>
+          {{ end }}
         </div>
       </li>
+      {{ else }}
       <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        <a class="nav-link{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}"
+          href="{{ .URL }}" title="{{ .Title }}">{{ .Pre }} {{ .Name }}</a>
       </li>
+      {{ end }}
+      {{ end }}
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+
+    <ul class="navbar-nav">
+      <a class="nav-item nav-link" href="{{ $.Site.Params.github }}" target="_blank" rel="noopener"><i
+          class="fab fa-github mr-3 text-warning" aria-hidden="true"></i></a>
+      <a class="nav-item nav-link" href="{{ $.Site.Params.twitter }}" target="_blank" rel="noopener"><i
+          class="fab fa-twitter mr-3 text-warning" aria-hidden="true"></i></a>
+    </ul>
+
   </div>
 </nav>
