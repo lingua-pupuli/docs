@@ -2,7 +2,7 @@
 title: "Code Navigation"
 subtitle: "The power of an IDE and the speed of a text editor"
 date: 2019-06-06T13:56:42-04:00
-
+pre: "fa-road"
 ---
 
 # Outline View
