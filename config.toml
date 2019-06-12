@@ -1,6 +1,6 @@
-baseURL      = "http://example.org/"
-title        = "Puppet VSCode Extension"
-languageCode = "en-us"
+baseURL          = "https://lingua-pupuli.github.io/"
+title            = "Puppet VSCode Extension"
+languageCode     = "en-us"
 sectionPagesMenu = "main"
 
 [params]
