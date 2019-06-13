@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="{{ .Site.BaseURL | absLangURL }}">
-    <svg width="32px" height="32px" viewBox="0 0 100 154" version="1.1" xmlns="http://www.w3.org/2000/svg"
+  <a class="navbar-brand text-uppercase" href="{{ .Site.BaseURL | absLangURL }}">
+    <svg width="30" height="30" viewBox="0 0 100 154" version="1.1" xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink">
       <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
         <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -40,7 +40,7 @@
       </li>
       {{ else }}
       <li class="nav-item">
-        <a class="nav-link{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}"
+        <a class="text-warning text-uppercase nav-link{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}"
           href="{{ .URL }}" title="{{ .Title }}">{{ .Pre }} {{ .Name }}</a>
       </li>
       {{ end }}
@@ -48,10 +48,10 @@
     </ul>
 
     <ul class="navbar-nav">
-      <a class="nav-item nav-link" href="{{ $.Site.Params.github }}" target="_blank" rel="noopener"><i
-          class="fab fa-github mr-3 text-warning" aria-hidden="true"></i></a>
-      <a class="nav-item nav-link" href="{{ $.Site.Params.twitter }}" target="_blank" rel="noopener"><i
-          class="fab fa-twitter mr-3 text-warning" aria-hidden="true"></i></a>
+      <a class="nav-item nav-link" href="{{ $.Site.Params.extensionURL }}" target="_blank" rel="noopener"><i class="fa fa-2x fa-project-diagram mr-3 text-warning" aria-hidden="true"></i></a>
+      <a class="nav-item nav-link" href="{{ $.Site.Params.github }}" target="_blank" rel="noopener"><i class="fab fa-2x fa-github mr-3 text-warning" aria-hidden="true"></i></a>
+      <a class="nav-item nav-link" href="{{ $.Site.Params.twitter }}" target="_blank" rel="noopener"><i class="fab fa-2x fa-twitter mr-3 text-warning" aria-hidden="true"></i></a>
+      <a class="nav-item nav-link" href="{{ $.Site.Params.slack }}" target="_blank" rel="noopener"><i class="fab fa-2x fa-slack mr-3 text-warning" aria-hidden="true"></i></a>
     </ul>
 
   </div>

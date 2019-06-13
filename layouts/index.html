@@ -1,8 +1,8 @@
 {{ define "main" }}
-<div class="jumbotron jumbotron-fluid p-4 p-md-5 bg-dark text-warning">
+<div class="jumbotron jumbotron-fluid p-4 p-md-5 bg-dark text-white">
   <div class="row">
-    <div class="col-md-4 copy">
-      <h1>Code editing. <strong>Redefined.</strong></h1>
+    <div class="col-md-4">
+      <h1 class="text-warning">Puppet editing. <strong>Redefined.</strong></h1>
       <div class="lead">
         <p>
           <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
@@ -10,6 +10,11 @@
             <meta itemprop="price" content="0" />
             <meta itemprop="priceCurrency" content="USD" />
           </span> Built on open source. Runs everywhere.</p>
+        <div class="btn-group text-justify-center">
+          <a href="{{ ref . "/feature" }}" class="btn btn-lg btn-outline-warning">Features</a>
+          <a href="vscode:extension/jpogran.puppet-vscode" class="btn btn-lg btn-warning">Install</a>
+          <a href="{{ ref . "/doc" }}" class="btn btn-lg btn-outline-warning">Docs</a>
+        </div>
       </div>
     </div>
     <div class="col-md-8">
@@ -18,10 +23,74 @@
   </div>
 </div>
 
-
 <div class="container">
-  <div class="row">
+  <div class="row m-5">
+    <div class="">
+      <a href="https://marketplace.visualstudio.com/items?itemName=jpogran.puppet-vscode" target="_blank"><img src="https://vsmarketplacebadge.apphb.com/version-short/jpogran.puppet-vscode.svg?colorA=222222&amp;colorB=FFAE1A" alt="marketplace" /> </a>
+      <a href="https://marketplace.visualstudio.com/items?itemName=jpogran.puppet-vscode" target="_blank"><img src="https://vsmarketplacebadge.apphb.com/downloads-short/jpogran.puppet-vscode.svg?colorA=222222&amp;colorB=FFAE1A" alt="downloads" /> </a>
+      <a href="https://marketplace.visualstudio.com/items?itemName=jpogran.puppet-vscode" target="_blank"><img src="https://vsmarketplacebadge.apphb.com/rating-short/jpogran.puppet-vscode.svg?colorA=222222&amp;colorB=FFAE1A" alt="rating" /> </a>
+    </div>
   </div>
+  <div class="row">
+    <div class="col-5">
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          {{ range first 1 (where .Site.RegularPages.ByWeight "Type" "feature") }}
+          <div class="carousel-item active">
+            <div class="card">
+              <div class="d-flex justify-content-center">
+                <span class="fa-stack fa-3x m-2" title="{{.Title}}">
+                  <i class="fas fa-circle fa-stack-2x text-warning"></i>
+                  <i class="fas {{.Params.pre}} fa-stack-1x fa-inverse"></i>
+                  <span class="sr-only">{{.Title}}</span>
+                </span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title text-center" style="color: #ffae1a">{{.Title}}</h5>
+                <p class="card-text text-center">{{.Params.subtitle}}</p>
+              </div>
+            </div>
+          </div>
+          {{ end }}
+          {{ range (after 1 (where .Site.RegularPages.ByWeight "Type" "feature")) }}
+          <div class="carousel-item">
+            <div class="card">
+              <div class="d-flex justify-content-center">
+                <span class="fa-stack fa-3x m-2" title="{{.Title}}">
+                  <i class="fas fa-circle fa-stack-2x text-warning"></i>
+                  <i class="fas {{.Params.pre}} fa-stack-1x fa-inverse"></i>
+                  <span class="sr-only">{{.Title}}</span>
+                </span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title text-center" style="color: #ffae1a">{{.Title}}</h5>
+                <p class="card-text text-center">{{.Params.subtitle}}</p>
+              </div>
+            </div>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+    <div class="col-7">
+      <div class="card">
+        <div class="d-flex justify-content-center">
+          <span class="fa-stack fa-3x m-2" title="Feature Hero">
+            <i class="fas fa-square fa-stack-2x text-warning"></i>
+            <i class="fa fa-ethernet fa-stack-1x fa-inverse"></i>
+            <span class="sr-only">Feature Hero</span>
+          </span>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title text-center" style="color: #ffae1a">Feature Hero</h5>
+          <p class="card-text text-center">LOREM IPSUM General Content</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row m-5"></div>
+
   <div class="row">
     <div class="col">
       <div class="card-deck mb-5">
@@ -76,7 +145,7 @@
             </span>
           </div>
           <div class="card-body">
-            <h5 class="card-title text-center" style="color: #ffae1a">Puppet Commands</h5>
+            <h5 class="card-title text-center" style="color: #FFAE1A">Puppet Commands</h5>
             <p class="card-text text-center">Use Puppet commands from within VSCode</p>
           </div>
         </div>
@@ -104,6 +173,49 @@
           <div class="card-body">
             <h5 class="card-title text-center" style="color: #ffae1a">Remote Development</h5>
             <p class="card-text text-center">Develop in Docker, WSL, or SSH</p>
+          </div>
+        </div>
+      </div>
+      <div class="card-deck">
+        <div class="card">
+          <div class="d-flex justify-content-center">
+            <span class="fa-stack fa-3x m-2" title="Debugging Puppet Code">
+              <i class="fas fa-circle fa-stack-2x text-warning"></i>
+              <i class="fas fa-bug fa-stack-1x fa-inverse"></i>
+              <span class="sr-only">Debugging Puppet Code</span>
+            </span>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title text-center" style="color: #ffae1a">Debugging Puppet Code</h5>
+            <p class="card-text text-center">Debug code right from the editor. Launch or attach to your running apps and
+              debug with break points, call stacks, and an interactive console.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="d-flex justify-content-center">
+            <span class="fa-stack fa-3x m-2" title="Control Repo">
+              <i class="fas fa-circle fa-stack-2x text-warning"></i>
+              <i class="fas fa-toolbox fa-stack-1x fa-inverse"></i>
+              <span class="sr-only">Control Repo</span>
+            </span>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title text-center" style="color: #ffae1a">Control Repo</h5>
+            <p class="card-text text-center">Live intellisense of the Puppet Custom Types, Functions, Classes and
+              Defined Types all from inside a control repo</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="d-flex justify-content-center">
+            <span class="fa-stack fa-3x m-2" title="Puppet Bolt">
+              <i class="fas fa-circle fa-stack-2x text-warning"></i>
+              <i class="fas fa-bolt fa-stack-1x fa-inverse"></i>
+              <span class="sr-only">Puppet Bolt</span>
+            </span>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title text-center" style="color: #ffae1a">Puppet Bolt</h5>
+            <p class="card-text text-center">Open source automation, in the editor.</p>
           </div>
         </div>
       </div>

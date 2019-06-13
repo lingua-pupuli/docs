@@ -8,3 +8,6 @@ sectionPagesMenu = "main"
   extensionURL = '//pup.pt/vscode'
   github       = '//github.com/lingua-pupuli/puppet-vscode'
   twitter      = '//twitter.com/puppetize'
+  slack        = '//puppetcommunity.slack.com'
+  youtube      = '//www.youtube.com/results?search_query=%23PuppetizeLive'
+  email        = '//puppetcommunity.slack.com'
