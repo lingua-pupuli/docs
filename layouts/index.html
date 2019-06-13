@@ -18,12 +18,13 @@
       </div>
     </div>
     <div class="col-md-8">
-      <img src="{{ "img/auto_complete.gif" | absURL }}" class="img-thumbnail">
+      <img src="{{ "img/auto_complete.gif" | absURL }}" class="img-thumbnail mt-3">
     </div>
   </div>
 </div>
 
 <div class="container">
+  <!-- marketplace links -->
   <div class="row m-5">
     <div class="">
       <a href="https://marketplace.visualstudio.com/items?itemName=jpogran.puppet-vscode" target="_blank"><img src="https://vsmarketplacebadge.apphb.com/version-short/jpogran.puppet-vscode.svg?colorA=222222&amp;colorB=FFAE1A" alt="marketplace" /> </a>
@@ -31,6 +32,8 @@
       <a href="https://marketplace.visualstudio.com/items?itemName=jpogran.puppet-vscode" target="_blank"><img src="https://vsmarketplacebadge.apphb.com/rating-short/jpogran.puppet-vscode.svg?colorA=222222&amp;colorB=FFAE1A" alt="rating" /> </a>
     </div>
   </div>
+
+  <!-- carousel -->
   <div class="row">
     <div class="col-5">
       <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
@@ -91,8 +94,10 @@
 
   <div class="row m-5"></div>
 
+  <!-- card deck -->
   <div class="row">
     <div class="col">
+      <h1 class="display-5 text-center">Everything You'd Expect</h1>
       <div class="card-deck mb-5">
         <div class="card">
           <div class="d-flex justify-content-center">
@@ -135,6 +140,7 @@
           </div>
         </div>
       </div>
+      <h1 class="display-5 text-center">Modern Development Tools</h1>
       <div class="card-deck mb-5">
         <div class="card">
           <div class="d-flex justify-content-center">
@@ -176,7 +182,8 @@
           </div>
         </div>
       </div>
-      <div class="card-deck">
+      <h1 class="display-5 text-center">Advanced Features</h1>
+      <div class="card-deck mb-5">
         <div class="card">
           <div class="d-flex justify-content-center">
             <span class="fa-stack fa-3x m-2" title="Debugging Puppet Code">
@@ -219,7 +226,37 @@
           </div>
         </div>
       </div>
+      <h1 class="display-5 text-center">Multiple Editor Support</h1>
+      <div class="card-deck">
+        <div class="card">
+          <div class="d-flex justify-content-center">
+            <span class="fa-stack fa-3x m-2" title="vim">
+              <i class="fas fa-circle fa-stack-2x text-warning"></i>
+              <i class="fas fa-pencil-alt fa-stack-1x fa-inverse"></i>
+              <span class="sr-only">vim</span>
+            </span>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title text-center" style="color: #ffae1a">vim</h5>
+            <p class="card-text text-center">Benefit from the some of the same features of VSCode inside vim</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="d-flex justify-content-center">
+            <span class="fa-stack fa-3x m-2" title="Atom">
+              <i class="fas fa-circle fa-stack-2x text-warning"></i>
+              <i class="fas fa-atom fa-stack-1x fa-inverse"></i>
+              <span class="sr-only">Atom</span>
+            </span>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title text-center" style="color: #ffae1a">Atom</h5>
+            <p class="card-text text-center">Benefit from the some of the same features of VSCode inside Atom</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+
 </div>
 {{ end }}
