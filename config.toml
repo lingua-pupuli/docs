@@ -11,3 +11,9 @@ sectionPagesMenu = "main"
   slack        = '//puppetcommunity.slack.com'
   youtube      = '//www.youtube.com/results?search_query=%23PuppetizeLive'
   email        = '//puppetcommunity.slack.com'
+
+  # twitter card details
+  description = "Puppet VSCode Extension"
+  images      = []
+  # opengraph title
+  title = "Puppet VSCode Extension"
