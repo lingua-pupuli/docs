@@ -18,87 +18,25 @@
       </div>
     </div>
     <div class="col-md-8">
+      <div class="d-flex justify-content-center">
+        <!-- marketplace links -->
+        <a href="https://marketplace.visualstudio.com/items?itemName=jpogran.puppet-vscode" target="_blank"><img src="https://vsmarketplacebadge.apphb.com/version-short/jpogran.puppet-vscode.svg?colorA=222222&amp;colorB=FFAE1A" alt="marketplace" /> </a>
+        <a href="https://marketplace.visualstudio.com/items?itemName=jpogran.puppet-vscode" target="_blank"><img src="https://vsmarketplacebadge.apphb.com/installs-short/jpogran.puppet-vscode.svg?colorA=222222&amp;colorB=FFAE1A" alt="installs" /> </a>
+        <a href="https://marketplace.visualstudio.com/items?itemName=jpogran.puppet-vscode" target="_blank"><img src="https://vsmarketplacebadge.apphb.com/downloads-short/jpogran.puppet-vscode.svg?colorA=222222&amp;colorB=FFAE1A" alt="downloads" /> </a>
+        <a href="https://marketplace.visualstudio.com/items?itemName=jpogran.puppet-vscode" target="_blank"><img src="https://vsmarketplacebadge.apphb.com/rating-short/jpogran.puppet-vscode.svg?colorA=222222&amp;colorB=FFAE1A" alt="rating" /> </a>
+      </div>
       <img src="{{ "img/auto_complete.gif" | absURL }}" class="img-thumbnail mt-3">
     </div>
   </div>
 </div>
 
 <div class="container">
-  <!-- marketplace links -->
-  <div class="row m-5">
-    <div class="">
-      <a href="https://marketplace.visualstudio.com/items?itemName=jpogran.puppet-vscode" target="_blank"><img src="https://vsmarketplacebadge.apphb.com/version-short/jpogran.puppet-vscode.svg?colorA=222222&amp;colorB=FFAE1A" alt="marketplace" /> </a>
-      <a href="https://marketplace.visualstudio.com/items?itemName=jpogran.puppet-vscode" target="_blank"><img src="https://vsmarketplacebadge.apphb.com/downloads-short/jpogran.puppet-vscode.svg?colorA=222222&amp;colorB=FFAE1A" alt="downloads" /> </a>
-      <a href="https://marketplace.visualstudio.com/items?itemName=jpogran.puppet-vscode" target="_blank"><img src="https://vsmarketplacebadge.apphb.com/rating-short/jpogran.puppet-vscode.svg?colorA=222222&amp;colorB=FFAE1A" alt="rating" /> </a>
-    </div>
-  </div>
-
-  <!-- carousel -->
-  <div class="row">
-    <div class="col-5">
-      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          {{ range first 1 (where .Site.RegularPages.ByWeight "Type" "feature") }}
-          <div class="carousel-item active">
-            <div class="card">
-              <div class="d-flex justify-content-center">
-                <span class="fa-stack fa-3x m-2" title="{{.Title}}">
-                  <i class="fas fa-circle fa-stack-2x text-warning"></i>
-                  <i class="fas {{.Params.pre}} fa-stack-1x fa-inverse"></i>
-                  <span class="sr-only">{{.Title}}</span>
-                </span>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title text-center" style="color: #ffae1a">{{.Title}}</h5>
-                <p class="card-text text-center">{{.Params.subtitle}}</p>
-              </div>
-            </div>
-          </div>
-          {{ end }}
-          {{ range (after 1 (where .Site.RegularPages.ByWeight "Type" "feature")) }}
-          <div class="carousel-item">
-            <div class="card">
-              <div class="d-flex justify-content-center">
-                <span class="fa-stack fa-3x m-2" title="{{.Title}}">
-                  <i class="fas fa-circle fa-stack-2x text-warning"></i>
-                  <i class="fas {{.Params.pre}} fa-stack-1x fa-inverse"></i>
-                  <span class="sr-only">{{.Title}}</span>
-                </span>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title text-center" style="color: #ffae1a">{{.Title}}</h5>
-                <p class="card-text text-center">{{.Params.subtitle}}</p>
-              </div>
-            </div>
-          </div>
-          {{ end }}
-        </div>
-      </div>
-    </div>
-    <div class="col-7">
-      <div class="card">
-        <div class="d-flex justify-content-center">
-          <span class="fa-stack fa-3x m-2" title="Feature Hero">
-            <i class="fas fa-square fa-stack-2x text-warning"></i>
-            <i class="fa fa-ethernet fa-stack-1x fa-inverse"></i>
-            <span class="sr-only">Feature Hero</span>
-          </span>
-        </div>
-        <div class="card-body">
-          <h5 class="card-title text-center" style="color: #ffae1a">Feature Hero</h5>
-          <p class="card-text text-center">LOREM IPSUM General Content</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="row m-5"></div>
 
   <!-- card deck -->
   <div class="row">
     <div class="col">
       <h1 class="display-5 text-center">Everything You'd Expect</h1>
-      <div class="card-deck mb-5">
+      <div class="card-deck mt-3 mb-5">
         <div class="card">
           <div class="d-flex justify-content-center">
             <span class="fa-stack fa-3x m-2" title="Intellisense">
@@ -141,7 +79,7 @@
         </div>
       </div>
       <h1 class="display-5 text-center">Modern Development Tools</h1>
-      <div class="card-deck mb-5">
+      <div class="card-deck mt-3 mb-5">
         <div class="card">
           <div class="d-flex justify-content-center">
             <span class="fa-stack fa-3x m-2" title="Puppet Commands">
@@ -183,7 +121,7 @@
         </div>
       </div>
       <h1 class="display-5 text-center">Advanced Features</h1>
-      <div class="card-deck mb-5">
+      <div class="card-deck mt-3 mb-5">
         <div class="card">
           <div class="d-flex justify-content-center">
             <span class="fa-stack fa-3x m-2" title="Debugging Puppet Code">
