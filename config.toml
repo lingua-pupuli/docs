@@ -16,3 +16,5 @@ languageCode     = "en-us"
   images      = []
   # opengraph title
   title = "Puppet VSCode Extension"
+
+  googlefonts = ["Roboto"]
