@@ -1,6 +1,7 @@
 baseURL          = "https://lingua-pupuli.github.io/"
 title            = "Puppet VSCode Extension"
 languageCode     = "en-us"
+googleAnalytics  = "UA-74930020-2"
 
 [params]
   subtitle     = "An open-source extension for Visual Studio Code"
