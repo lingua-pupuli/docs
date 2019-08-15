@@ -1,0 +1,29 @@
+name: "Docs Deployment"
+
+on:
+  push:
+    branches:
+    - docsy-ification
+
+jobs:
+  deploy:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Install Hugo
+      run: sudo apt-get install hugo
+    - name: Init Submodules
+      run: |
+        cd themes/docsy
+        git submodule update --force --init --depth 1
+        cd ../..
+    - name: Build Static Sites
+      run: |
+        hugo --source vscode --destination '../public/vscode' --environment production
+        hugo --source editor-services --destination '../lingua-pupuli/static/editor-services' --environment production && \
+        hugo --source editor-syntax --destination '../lingua-pupuli/static/editor-syntax' --environment production && \
+        hugo --source lingua-pupuli --destination '../public/lingua-pupuli' --environment production
+    - name: Deploy Sites
+      run: echo "To do"
