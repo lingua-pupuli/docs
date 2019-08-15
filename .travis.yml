@@ -1,0 +1,51 @@
+---
+dist: xenial
+language: node_js
+node_js: 11.0.0
+
+sudo: false
+
+# Enable for PowerShell support
+# addons:
+#   apt:
+#     sources:
+#       - sourceline: "deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/prod xenial main"
+#         key_url: "https://packages.microsoft.com/keys/microsoft.asc"
+#     packages:
+#       - powershell
+
+git:
+  # We do this ourselves later
+  submodules: false
+
+branches:
+  only:
+  - docsy-ification # Switch to master once done.
+
+install:
+  - wget -O /tmp/hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.57.0/hugo_extended_0.57.0_Linux-64bit.deb
+  - sudo dpkg -i /tmp/hugo.deb
+  - npm install
+
+# env:
+#   global:
+#     - GITHUB_TOKEN=supersecret
+
+script:
+  - hugo version;
+    pushd themes/docsy;
+    git submodule update -f --init --recursive --depth 1;
+    popd;
+    export HUGO_ENV=production;
+  - bash .travis-ci/pre-deploy.sh
+  - hugo --source vscode --destination '../public/vscode';
+    hugo --source editor-services --destination '../lingua-pupuli/static/editor-services';
+    hugo --source editor-syntax --destination '../lingua-pupuli/static/editor-syntax';
+    hugo --source lingua-pupuli --destination '../public/lingua-pupuli'
+
+deploy:
+  - provider: script
+    script: bash .travis-ci/deploy.sh
+    skip_cleanup: true
+    on:
+      branch: docsy-ification # Switch to master once done.

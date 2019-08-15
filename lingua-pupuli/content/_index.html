@@ -1,0 +1,54 @@
++++
+title = "Home"
+linkTitle = "Home"
++++
+
+{{ define "main" }}
+
+{{< blocks/section color="white" >}}
+<h1>The Lingua Pupuli Project Umbrella</h1>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+{{% /blocks/section %}}
+
+<section id="pageContent">
+  <div class="container">
+    <div class="card-deck">
+      <div class="card border-primary">
+        <a href="https://puppet-vscode.github.io" class="card-link stretched-link" title="Puppet VS Code Extension">
+        <img src="{{< static "img/vscode_logo.png" >}}" class="card-img-top" draggable="false" style="padding: 10px;" alt="Puppet VS Code Extension logo" />
+        <div class="card-body text-dark">
+          <h5 class="card-title">Puppet VS Code Extension</h5>
+          <p class="card-text">
+            The premiere Puppet Editing Experience.
+          </p>
+        </div>
+        </a>
+      </div>
+
+      <div class="card border-primary">
+        <a href="editor-services/" class="card-link stretched-link" title="Puppet Editor Services">
+        <img src="{{< static "img/editor_services_logo.png" >}}" class="card-img-top" draggable="false" style="padding: 10px;" alt="Puppet VS Code Extension logo" />
+        <div class="card-body text-dark">
+          <h5 class="card-title">Puppet Editor Services</h5>
+          <p class="card-text">
+            Cross platform, Open Source, Multi Editor support for the Language and Debug Server protocols.
+          </p>
+        </div>
+        </a>
+      </div>
+
+      <div class="card border-primary">
+        <a href="editor-syntax/" class="card-link stretched-link" title="Puppet Editor Syntax">
+        <img src="{{< static "img/editor_syntax_logo.png" >}}" class="card-img-top" draggable="false" style="padding: 10px;" alt="Puppet VS Code Extension logo" />
+        <div class="card-body text-dark">
+          <h5 class="card-title">Puppet Syntax Highlighter</h5>
+          <p class="card-text">
+            Textmate Highligher for the Puppet Language, for whatever editor you use!
+          </p>
+        </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

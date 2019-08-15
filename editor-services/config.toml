@@ -1,0 +1,9 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Puppet Editor Services"
+
+# Hugo allows theme composition (and inheritance). The precedence is from left to right.
+themesDir = "../themes"
+theme = ["docsy"]
+
+disableKinds = ["taxonomy", "taxonomyTerm"]
