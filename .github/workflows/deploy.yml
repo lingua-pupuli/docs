@@ -20,9 +20,8 @@ jobs:
         git submodule update --force --init --depth 1
         cd ../..
     - name: Build Static Sites
-      env:
-        HUGO_ENVIRONMENT: production
       run: |
+        export HUGO_ENVIRONMENT=production
         hugo --source vscode --destination '../public/vscode'
         hugo --source editor-services --destination '../lingua-pupuli/static/editor-services'
         hugo --source editor-syntax --destination '../lingua-pupuli/static/editor-syntax'
