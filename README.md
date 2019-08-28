@@ -1,3 +1,6 @@
+# The central Lingua-Pupuli docs site
+
+[![Build Status](https://travis-ci.com/lingua-pupuli/docs.svg?branch=master)](https://travis-ci.com/lingua-pupuli/docs)
 
 ## Cloning
 
@@ -10,8 +13,16 @@ git clone --recurse-submodules https://github.com/lingua-pupuli/docs.git
 To update the Docsy theme use
 
 ```
-git submodule update --init --recursive --depth 1
+git submodule update --init --recursive --depth 50
 ```
+
+## Requirements
+
+- Hugo Extended. See [Docsy Getting Started](https://www.docsy.dev/docs/getting-started/#prerequisites-and-installation) for more information.
+
+For Windows users, chocolatey hosts a [Hugo Extended package](https://chocolatey.org/packages/hugo-extended)
+
+- NodeJS with PostCSS installed.  This is available via `npm install`. See [Docsy Getting Started](https://www.docsy.dev/docs/getting-started/#install-postcss) for more information.
 
 ## Lingua-Pupuli Umbrella Project
 
