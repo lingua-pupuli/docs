@@ -20,7 +20,7 @@ git:
 
 branches:
   only:
-  - docsy-ification # Switch to master once done.
+  - master
 
 install:
   - wget -O /tmp/hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.57.0/hugo_extended_0.57.0_Linux-64bit.deb
@@ -48,4 +48,4 @@ deploy:
     script: bash .travis-ci/deploy.sh
     skip_cleanup: true
     on:
-      branch: docsy-ification # Switch to master once done.
+      branch: master
