@@ -20,10 +20,6 @@ like to make changes, please create a project issue.
 
 The absolute filepath where the Puppet Editor Service will output the debugging log. By default no logfile is generated
 
-#### puppet.editorService.docker.imageName
-
-The name of the image with tag that contains the Puppet Language server. For example: linguapupuli/puppet-language-server:latest
-
 Default: `linguapupuli/puppet-language-server:latest`
 
 #### puppet.editorService.enable
@@ -36,6 +32,12 @@ Default: `True`
 
 An array of strings of experimental features to enable in the Puppet Editor Service
 
+#### puppet.editorService.hover.showMetadataInfo
+
+Enable or disable showing Puppet Module version information in the metadata.json file
+
+Default: `True`
+
 #### puppet.editorService.loglevel
 
 Set the logging verbosity level for the Puppet Editor Service, with Debug producing the most output and Error producing the least
@@ -46,7 +48,7 @@ Default: `normal`
 
 #### puppet.editorService.protocol
 
-The protocol used to communicate with the Puppet Editor Service.  By default the local STDIO protocol is used
+The protocol used to communicate with the Puppet Editor Service. By default the local STDIO protocol is used. The docker protocol is **DEPRECATED** and will be removed in a future version
 
 Possible values: `stdio`, `tcp`, `docker`
 
@@ -120,6 +122,12 @@ Possible values: `messagebox`, `statusbar`, `none`
 
 Default: `messagebox`
 
+#### puppet.pdk.checkVersion
+
+Enable/disable checking if installed PDK version is latest
+
+Default: `True`
+
 #### puppet.titleBar.pdkNewModule.enable
 
 Enable/disable the PDK New Module icon in the Editor Title Bar
@@ -132,6 +140,10 @@ Default: `True`
 ## Deprecated settings
 
 <!-- Begin Deprecated Settings -->
+#### puppet.editorService.docker.imageName
+
+The name of the image with tag that contains the Puppet Language server. For example: linguapupuli/puppet-language-server:latest
+
 #### puppet.editorService.modulePath
 
 Please use puppet.editorService.puppet.modulePath instead
@@ -170,23 +182,3 @@ Please use puppet.installDirectory instead
 
 
 <!-- End Deprecated Settings -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

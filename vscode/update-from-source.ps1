@@ -97,7 +97,7 @@ function Get-AvailableExtensionSettings($json) {
   $json.contributes.configuration.properties | Get-Member -MemberType NoteProperty | Sort-Object | ForEach-Object {
     $propName = $_.Name
     $property = $json.contributes.configuration.properties."$propName"
-    if ($property.description -notlike '*DEPRECATED*') {
+    if ($property.description -notlike '`*`*DEPRECATED*') {
       $content += "#### $propName`n`n" + $property.description + "`n`n"
     }
 
@@ -118,7 +118,7 @@ function Get-DeprecatedExtensionSettings($json) {
   $json.contributes.configuration.properties | Get-Member -MemberType NoteProperty | Sort-Object | ForEach-Object {
     $propName = $_.Name
     $property = $json.contributes.configuration.properties."$propName"
-    if ($property.description -like '*DEPRECATED*') {
+    if ($property.description -like '`*`*DEPRECATED*') {
       $content += "#### $propName`n`n" + $property.description.replace("**DEPRECATED**", "").Trim() + "`n`n"
     }
   }
