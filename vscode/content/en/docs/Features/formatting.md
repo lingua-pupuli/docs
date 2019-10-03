@@ -13,7 +13,7 @@ The Puppet VS Code extension supports; Format the line while typing and Format a
 
 {{% alert title="Information" color="secondary" %}}
 
-- This feature is disabled by default and is enabled using the [`puppet.editorService.formatOnType.enable`](../../extension-settings/#puppet-editorservice-formatontype-enable) setting
+- This feature is disabled by default, both by VS Code and the Puppet Extension.  It can be enabled using the [`puppet.editorService.formatOnType.enable`](../../extension-settings/#puppet-editorservice-formatontype-enable) and [`editor.formatOnType`](https://code.visualstudio.com/docs/getstarted/settings#_default-settings) settings
 
 - Formatting will not occur on large documents (> 4KB) or when using tabs for indentation
 {{% /alert %}}
