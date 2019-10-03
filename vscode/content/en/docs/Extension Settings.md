@@ -20,8 +20,6 @@ like to make changes, please create a project issue.
 
 The absolute filepath where the Puppet Editor Service will output the debugging log. By default no logfile is generated
 
-Default: `linguapupuli/puppet-language-server:latest`
-
 #### puppet.editorService.enable
 
 Enable/disable advanced Puppet Language Features
@@ -31,6 +29,10 @@ Default: `True`
 #### puppet.editorService.featureFlags
 
 An array of strings of experimental features to enable in the Puppet Editor Service
+
+#### puppet.editorService.formatOnType.enable
+
+Enable/disable the Puppet document on-type formatter, for example hashrocket alignment
 
 #### puppet.editorService.hover.showMetadataInfo
 
@@ -48,9 +50,9 @@ Default: `normal`
 
 #### puppet.editorService.protocol
 
-The protocol used to communicate with the Puppet Editor Service. By default the local STDIO protocol is used. The docker protocol is **DEPRECATED** and will be removed in a future version
+The protocol used to communicate with the Puppet Editor Service. By default the local STDIO protocol is used.
 
-Possible values: `stdio`, `tcp`, `docker`
+Possible values: `stdio`, `tcp`
 
 Default: `stdio`
 
@@ -140,10 +142,6 @@ Default: `True`
 ## Deprecated settings
 
 <!-- Begin Deprecated Settings -->
-#### puppet.editorService.docker.imageName
-
-The name of the image with tag that contains the Puppet Language server. For example: linguapupuli/puppet-language-server:latest
-
 #### puppet.editorService.modulePath
 
 Please use puppet.editorService.puppet.modulePath instead
@@ -182,3 +180,5 @@ Please use puppet.installDirectory instead
 
 
 <!-- End Deprecated Settings -->
+
+
