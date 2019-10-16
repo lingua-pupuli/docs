@@ -6,13 +6,13 @@ node_js: 11.0.0
 sudo: false
 
 # Enable for PowerShell support
-# addons:
-#   apt:
-#     sources:
-#       - sourceline: "deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/prod xenial main"
-#         key_url: "https://packages.microsoft.com/keys/microsoft.asc"
-#     packages:
-#       - powershell
+addons:
+  apt:
+    sources:
+      - sourceline: "deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/prod xenial main"
+        key_url: "https://packages.microsoft.com/keys/microsoft.asc"
+    packages:
+      - powershell
 
 git:
   # We do this ourselves later
@@ -37,7 +37,7 @@ script:
     git submodule update -f --init --recursive --depth 1;
     popd;
     export HUGO_ENV=production;
-  - bash .travis-ci/pre-deploy.sh
+  - pwsh -File .travis-ci/pre-deploy.ps1
   - hugo --source vscode --destination '../public/vscode';
     hugo --source editor-services --destination '../lingua-pupuli/static/editor-services';
     hugo --source editor-syntax --destination '../lingua-pupuli/static/editor-syntax';
@@ -45,7 +45,7 @@ script:
 
 deploy:
   - provider: script
-    script: bash .travis-ci/deploy.sh
+    script: pwsh -File .travis-ci/deploy.ps1
     skip_cleanup: true
     on:
       branch: master
