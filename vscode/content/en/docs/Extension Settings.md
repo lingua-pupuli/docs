@@ -136,6 +136,12 @@ Enable/disable the PDK New Module icon in the Editor Title Bar
 
 Default: `True`
 
+#### puppet.validate.resolvePuppetfiles
+
+Enable/disable using dependency resolution for Puppetfiles
+
+Default: `True`
+
 
 <!-- End Available Settings -->
 
