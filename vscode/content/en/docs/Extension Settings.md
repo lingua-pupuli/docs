@@ -148,43 +148,8 @@ Default: `True`
 ## Deprecated settings
 
 <!-- Begin Deprecated Settings -->
-#### puppet.editorService.modulePath
-
-Please use puppet.editorService.puppet.modulePath instead
-
-#### puppet.languageclient.minimumUserLogLevel
-
-Please use puppet.editorService.loglevel instead
-
-#### puppet.languageclient.protocol
-
-Please use puppet.editorService.protocol instead
-
-#### puppet.languageserver.address
-
-Please use puppet.editorService.tcp.address instead
-
-#### puppet.languageserver.debugFilePath
-
-Please use puppet.editorService.debugFilePath instead
-
-#### puppet.languageserver.filecache.enable
-
-Please use puppet.editorService.featureFlags with 'filecache' instead
-
-#### puppet.languageserver.port
-
-Please use puppet.editorService.tcp.port instead
-
-#### puppet.languageserver.timeout
-
-Please use puppet.editorService.timeout instead
-
-#### puppet.puppetAgentDir
-
-Please use puppet.installDirectory instead
-
 
 <!-- End Deprecated Settings -->
+
 
 
