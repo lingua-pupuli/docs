@@ -50,7 +50,7 @@ Steps:
 
 1. Clone the source repositories and checkout their required branch/tag/reference. Note the directories where they were cloned to as it is required for step 2.
 
-    - Puppet VS Code Extension : https://github.com/lingua-pupuli/puppet-vscode.git
+    - Puppet VS Code Extension : https://github.com/puppetlabs/puppet-vscode.git
 
 2. Run the `update-from-source.ps1` PowerShell script.
 

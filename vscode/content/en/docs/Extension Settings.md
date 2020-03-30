@@ -9,7 +9,7 @@ github_repo: "" # Disable the edit commands
 You can configure [User and Workspace VS Code settings](https://code.visualstudio.com/docs/getstarted/settings) for the Puppet Extension, like any other VS Code setting. The table below lists all of the available settings for the Puppet Extension
 
 {{% alert title="Information" color="secondary" %}}
-The setting information comes from the Puppet VS Code Extension [`package.json`](https://github.com/lingua-pupuli/puppet-vscode/blob/master/package.json) file. If you would
+The setting information comes from the Puppet VS Code Extension [`package.json`](https://github.com/puppetlabs/puppet-vscode/blob/master/package.json) file. If you would
 like to make changes, please create a project issue.
 {{% /alert %}}
 
@@ -150,7 +150,3 @@ Default: `True`
 <!-- Begin Deprecated Settings -->
 
 <!-- End Deprecated Settings -->
-
-
-
-

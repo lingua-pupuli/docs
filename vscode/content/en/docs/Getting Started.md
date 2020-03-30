@@ -9,7 +9,7 @@ description: >
 
 - Step 1: Install a supported version of the Puppet Development Kit on your system (see [Prerequisites](#prerequisites) for more information).
 
-- Step 2: [Install](https://code.visualstudio.com/docs/editor/extension-gallery#_install-an-extension) the Puppet [extension](https://marketplace.visualstudio.com/items?itemName=jpogran.puppet-vscode) for Visual Studio Code.
+- Step 2: [Install](https://code.visualstudio.com/docs/editor/extension-gallery#_install-an-extension) the Puppet [extension](https://marketplace.visualstudio.com/items?itemName=puppetlabs.puppet-vscode) for Visual Studio Code.
 
 - Step 3: Open, or create, a Puppet manifest file (a file with a `.pp` or `.epp` extension) or a [`Puppetfile`](https://puppet.com/docs/pe/latest/puppetfile.html) and start automating!
 
