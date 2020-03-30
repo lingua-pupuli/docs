@@ -63,7 +63,7 @@ weight = 1
 [params]
   subtitle     = "An open-source extension for Visual Studio Code"
   extensionURL = '//pup.pt/vscode'
-  github       = '//github.com/lingua-pupuli/puppet-vscode'
+  github       = '//github.com/puppetlabs/puppet-vscode'
   twitter      = '//twitter.com/puppetize'
   slack        = '//puppetcommunity.slack.com'
   youtube      = '//www.youtube.com/results?search_query=%23PuppetizeLive'
@@ -85,7 +85,7 @@ version_menu = "Releases"
 github_repo = "https://github.com/lingua-pupuli/docs"
 github_subdir = "vscode"
 # An optional link to a related project repo. For example, the sibling repository where your product code lives.
-github_project_repo = "https://github.com/lingua-pupuli/puppet-vscode"
+github_project_repo = "https://github.com/puppetlabs/puppet-vscode"
 
 # Specify a value here if your content directory is not in your repo's root directory
 # github_subdir = ""
@@ -148,7 +148,7 @@ no = 'Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY
 # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
 [[params.links.developer]]
         name = "GitHub"
-        url = "https://github.com/lingua-pupuli/puppet-vscode"
+        url = "https://github.com/puppetlabs/puppet-vscode"
         icon = "fab fa-github"
         desc = "Development takes place here!"
 [[params.links.developer]]

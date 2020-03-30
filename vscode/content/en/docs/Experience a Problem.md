@@ -24,7 +24,7 @@ You can reload the Puppet Language Server by opening the command palette and sta
 If you're having trouble with the Puppet extension, please follow these instructions
 to file an issue on our GitHub repository:
 
-### 1. File an issue on our [Issues Page](https://github.com/lingua-pupuli/puppet-vscode/issues)
+### 1. File an issue on our [Issues Page](https://github.com/puppetlabs/puppet-vscode/issues)
 
 Make sure to fill in the information that is requested in the issue template as it
 will help us investigate the problem more quickly.
