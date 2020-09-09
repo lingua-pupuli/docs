@@ -97,8 +97,10 @@ function Get-AvailableExtensionSettings($json) {
   $json.contributes.configuration.properties | Get-Member -MemberType NoteProperty | Sort-Object | ForEach-Object {
     $propName = $_.Name
     $property = $json.contributes.configuration.properties."$propName"
-    if ($property.description -notlike '`*`*DEPRECATED*') {
+    if ($property.description -and $property.description -notlike '`*`*DEPRECATED*') {
       $content += "#### $propName`n`n" + $property.description + "`n`n"
+    } elseif ($property.markdownDescription -and $property.markdownDescription -notlike '`*`*DEPRECATED*') {
+      $content += "#### $propName`n`n" + $property.markdownDescription + "`n`n"
     }
 
     if ($null -ne $property.enum) {
