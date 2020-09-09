@@ -98,11 +98,11 @@ Default: `True`
 
 #### puppet.installDirectory
 
-The fully qualified path to the Puppet install directory. This can be a PDK or Puppet Agent installation. For example: 'C:\Program Files\Puppet Labs\Puppet' or '/opt/puppetlabs/puppet'. If this is not set the extension will attempt to detect the installation directory
+The fully qualified path to the Puppet install directory. This can be a PDK or Puppet Agent installation. For example: 'C:\Program Files\Puppet Labs\Puppet' or '/opt/puppetlabs/puppet'. If this is not set the extension will attempt to detect the installation directory. Do **not** use when `#puppet.installType#` is set to `auto`
 
 #### puppet.installType
 
-The type of Puppet installation. Either the Puppet Development Kit (pdk) or the Puppet Agent (agent). Choose 'auto' to have the extension detect which to use automatically based on default install locations
+The type of Puppet installation. Either the Puppet Development Kit (pdk) or the Puppet Agent (agent). Choose `auto` to have the extension detect which to use automatically based on default install locations
 
 Possible values: `auto`, `pdk`, `agent`
 
@@ -150,3 +150,4 @@ Default: `True`
 <!-- Begin Deprecated Settings -->
 
 <!-- End Deprecated Settings -->
+
