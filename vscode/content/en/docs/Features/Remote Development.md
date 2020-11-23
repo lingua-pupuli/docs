@@ -5,8 +5,4 @@ description: >
   Editing Puppet wherever you need to
 ---
 
-{{% alert title="Coming Soon" color="success" %}}
-Containers, WSL and Docker
-
-Under active development!!
-{{% /alert %}}
+{{< youtube j3o-U1c_dXs >}}
