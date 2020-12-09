@@ -42,6 +42,10 @@ This hugo site needs the editor-services and editor-syntax site built first, int
 hugo server --bind "0.0.0.0" --source vscode
 ```
 
+### Using VSCode Dev Containers
+
+Due to `fsnotify` not being able to _watch_ Windows mounts inside docker containers, Hugo may not see file changes and will not trigger a rebuild automatically. This is a known problem with Docker/VScode/WSL2/WSL1. To workaround this issue either; do not use Windows to host Linux containers (which is 😢) or use the [Clone in Volume](https://github.com/microsoft/vscode-docs/blob/master/remote-release-notes/v1_47.md#containers-version-01280) feature.
+
 ## Updating the websites from source code
 
 Parts of the websites are automatically generated from source code (e.g. the VS Code `package.json` file). A  PowerShell script has been created to automatically parse the source code, and update the relevant websites.
