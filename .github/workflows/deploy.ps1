@@ -6,10 +6,6 @@ $VscodePath = Join-Path 'public' 'vscode'
 $LinguaPath = Join-Path 'public' 'lingua-pupuli'
 $GithubToken = $ENV:GITHUB_TOKEN
 
-if ($null -eq $GithubToken) {
-  Throw "This script requires the GITHUB_TOKEN environment variable"
-}
-
 Function Has-Changes {
   $result = (&git status --porcelain)
   Write-Output ($null -ne $result)
@@ -33,12 +29,16 @@ Function Has-Changes {
     $message = "Rebuilding site $TimeStampString"
     & git commit -m $message
 
-    # Get the git remote URL and fudge in the bot credentials
-    $RemoteURL = (&git remote get-url origin --push)
-    $RemoteURL = $RemoteURL.replace('https://github.com', "https://lingua-pupuli-bot:${GithubToken}@github.com")
+    if ([String]::IsNullOrEmpty($GithubToken)) {
+      Write-Warning "This script requires the GITHUB_TOKEN environment variable."
+    } else {
+      # Get the git remote URL and fudge in the bot credentials
+      $RemoteURL = (&git remote get-url origin --push)
+      $RemoteURL = $RemoteURL.replace('https://github.com', "https://lingua-pupuli-bot:${GithubToken}@github.com")
 
-    # Push source and build repos.
-    &git push -q $RemoteURL master
+      # Push source and build repos.
+      & git push -q $RemoteURL master
+    }
   } else {
     Write-Output "${RepoPath} has no changes"
   }
