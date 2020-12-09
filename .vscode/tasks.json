@@ -1,0 +1,24 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "shell",
+      "command": "hugo",
+      "label": "Run Hugo for Puppet VSCode Docs site",
+      "args": ["server","--source","vscode","--buildDrafts","--buildFuture","--watch","--bind","0.0.0.0"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      }
+    }
+
+  ]
+}
