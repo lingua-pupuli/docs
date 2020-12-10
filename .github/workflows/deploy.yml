@@ -1,0 +1,62 @@
+name: Deploy Websites
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build and Deploy websites
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: false
+
+      - name: Fetch Submodules
+        run: |
+          pushd themes/docsy;
+          git submodule update -f --init --recursive --depth 1;
+          popd;
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.75.1'
+          extended: true
+
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+
+      - name: Cache dependencies
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install node modules
+        run: |
+          npm install -g postcss-cli@^7.1.0
+          npm ci
+          npm list
+
+      - name: Build websites
+        shell: pwsh
+        run: |
+          & .github/workflows/pre-deploy.ps1
+          hugo --source vscode --destination '../public/vscode'
+          hugo --source editor-services --destination '../lingua-pupuli/static/editor-services'
+          hugo --source editor-syntax --destination '../lingua-pupuli/static/editor-syntax'
+          hugo --source lingua-pupuli --destination '../public/lingua-pupuli'
+
+      - name: Deploy websites
+        shell: pwsh
+        env:
+          GITHUB_TOKEN: ${{ secrets.DeployGitHubToken }}
+        run: |
+          & .github/workflows/deploy.ps1
