@@ -6,5 +6,5 @@ menu:
   main:
     weight: 10
 description: >
-  What is the Puppet VSCode Extension
+  What is the Puppet VS Code Extension
 ---

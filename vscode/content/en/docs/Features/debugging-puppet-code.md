@@ -25,7 +25,7 @@ The debugging features in the extension are based on the excellent ideas in [pup
 
 To debug a simple manifest in VS Code, press `F5` and VS Code will try to debug your currently active manifest by running the equivalent of `puppet apply`. Note that by default No Operation (`--noop`) is enabled so that your local computer will not be modified.
 
-The [VSCode Debugging - Launch Configurations](https://code.visualstudio.com/docs/editor/debugging#_launch-configurations) website has instructions on how to configure the debug session with more advanced options.
+The [VS Code Debugging - Launch Configurations](https://code.visualstudio.com/docs/editor/debugging#_launch-configurations) website has instructions on how to configure the debug session with more advanced options.
 
 #### Settings
 
