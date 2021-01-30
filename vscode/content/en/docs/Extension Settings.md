@@ -34,6 +34,12 @@ An array of strings of experimental features to enable in the Puppet Editor Serv
 
 Enable/disable the Puppet document on-type formatter, for example hashrocket alignment
 
+#### puppet.editorService.formatOnType.maxFileSize
+
+Sets the maximum file size (in Bytes) that document on-type formatting will occur. Setting this to zero (0) will disable the file size check. Note that large file sizes can cause performance issues.
+
+Default: `4096`
+
 #### puppet.editorService.hover.showMetadataInfo
 
 Enable or disable showing Puppet Module version information in the metadata.json file
@@ -150,4 +156,3 @@ Default: `True`
 <!-- Begin Deprecated Settings -->
 
 <!-- End Deprecated Settings -->
-
