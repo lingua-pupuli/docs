@@ -29,11 +29,11 @@ You can find instructions and installation links here:
 
 > Note: Puppet Agent 5.5 and above is preferred.
 
-- [Windows](https://docs.puppet.com/puppet/latest/install_windows.html)
+- [Windows](https://puppet.com/docs/puppet/7.3/install_agents.html#install_windows_agents)
 
-- [MacOSX](https://docs.puppet.com/puppet/latest/install_osx.html)
+- [MacOSX](https://puppet.com/docs/puppet/7.3/install_agents.html#install_mac_agents)
 
-- [Linux](https://docs.puppet.com/puppet/latest/install_linux.html)
+- [Linux](https://puppet.com/docs/puppet/7.3/install_agents.html#install_nix_agents)
 
 ### Platform support
 
