@@ -145,7 +145,7 @@ function Update-ExtensionSettings() {
   $PackageJSONFile = Join-Path -Path $ExtensionSourcePath -ChildPath 'package.json'
   $packgeJson = Get-Content -Path $PackageJSONFile -Raw | ConvertFrom-JSON
 
-  $DocsFile = Join-Path -Path $DocsRoot -ChildPath 'Extension Settings.md'
+  $DocsFile = Join-Path -Path $DocsRoot -ChildPath 'extension-settings.md'
   $fileContent = Get-Content -Path $DocsFile -Raw
 
   $fileContent = Update-TextChunk `
@@ -233,7 +233,7 @@ $($ReleaseInfo.text)
 }
 
 # Generate the 'Extension Settings.md' docs page
-Write-Output "Updating 'Extension Settings.md' document..."
+Write-Output "Updating 'extension-settings.md' document..."
 Update-ExtensionSettings
 
 Write-Output "Updating Releases ..."

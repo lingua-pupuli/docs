@@ -9,7 +9,7 @@ The extension is quite resilient but sometimes, something goes wrong. The follow
 
 ### Puppet Agent Install
 
-A commonly encountered problem is not having the PDK or Puppet Agent installed on the computer you are running VSCode on. As noted in the [Prerequisites section]({{< ref "/docs/Getting Started#prerequisites" >}}), you will need to have the PDK or Puppet Agent installed in order to fully use this extension, as the extension uses the Puppet binaries and the Ruby language bundled into the PDK or agent install in order to function.
+A commonly encountered problem is not having the PDK or Puppet Agent installed on the computer you are running VS Code on. As noted in the [Prerequisites section]({{< ref "/docs/getting-started#prerequisites" >}}), you will need to have the PDK or Puppet Agent installed in order to fully use this extension, as the extension uses the Puppet binaries and the Ruby language bundled into the PDK or agent install in order to function.
 
 If you are receiving an error right after opening a Puppet file saying that a Puppet Agent install could not be found, ensure that Puppet is installed on the system. The VSCode extension attempts to find a valid Puppet install if a path is not configured in `puppet.installDirectory` in `User Settings`, so if Puppet is installed but not in a default path please check that your setting points to the correct path.
 
