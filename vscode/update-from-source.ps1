@@ -207,7 +207,7 @@ title: `"Release ${ReleaseVersion}`"
 linkTitle: `"Release ${ReleaseVersion}`"
 date: $($ReleaseInfo.date)
 description: >
-  VSCode Extension Release ${ReleaseVersion}
+  VS Code Extension Release ${ReleaseVersion}
 github_repo: `"`" # Disable the edit commands
 ---
 

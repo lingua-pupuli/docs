@@ -2,7 +2,7 @@
 title: "Puppet Commands"
 weight: 2
 description: >
-  Use Puppet commands from within VSCode!
+  Use Puppet commands from within VS Code!
 ---
 
 ## Puppet Resource
