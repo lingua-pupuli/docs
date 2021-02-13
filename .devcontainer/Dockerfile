@@ -11,6 +11,9 @@ EXPOSE 1313
 RUN wget -O /tmp/hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.57.0/hugo_extended_0.57.0_Linux-64bit.deb \
     && dpkg -i /tmp/hugo.deb
 
+# Fix for https://github.com/yarnpkg/yarn/issues/7866
+RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
+
 # Install PowerShell
 RUN export DEBIAN_FRONTEND=noninteractive \
     && wget https://packages.microsoft.com/config/debian/10/packages-microsoft-prod.deb \
