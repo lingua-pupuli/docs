@@ -8,8 +8,11 @@ FROM mcr.microsoft.com/vscode/devcontainers/javascript-node:0-${VARIANT}
 EXPOSE 1313
 
 # Install Hugo
-RUN wget -O /tmp/hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.57.0/hugo_extended_0.57.0_Linux-64bit.deb \
+RUN wget -O /tmp/hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.75.1/hugo_extended_0.75.1_Linux-64bit.deb \
     && dpkg -i /tmp/hugo.deb
+
+# Fix for https://github.com/yarnpkg/yarn/issues/7866
+RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
 
 # Install PowerShell
 RUN export DEBIAN_FRONTEND=noninteractive \
