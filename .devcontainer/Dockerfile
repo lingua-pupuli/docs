@@ -20,3 +20,11 @@ RUN export DEBIAN_FRONTEND=noninteractive \
     && dpkg -i packages-microsoft-prod.deb \
     && apt-get update \
     && apt-get install -y powershell
+
+# Install Ruby
+RUN export DEBIAN_FRONTEND=noninteractive \
+    && apt-get install -y ruby-full \
+    && gem install bundler \
+    && gem install yard \
+    && gem install redcarpet \
+    && gem install github-markup
