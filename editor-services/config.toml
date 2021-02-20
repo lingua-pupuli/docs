@@ -62,17 +62,17 @@ weight = 1
   ]
 
 [menu]
-  [[menu.main]]
-    identifier = "vscode"
-    name = "Puppet VS Code Extension"
-    url = "https://puppet-vscode.github.io"
-    weight = 1
+  # [[menu.main]]
+  #   identifier = "vscode"
+  #   name = "Puppet VS Code Extension"
+  #   url = "https://puppet-vscode.github.io"
+  #   weight = 1
 
   [[menu.main]]
     identifier = "lingua-pupuli"
     name = "Lingua Pupuli"
     url = ".."
-    weight = 2
+    weight = 1000
 
 copyright = "James Pogran, Glenn Sarti, Michael Lombardi"
 
