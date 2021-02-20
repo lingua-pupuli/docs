@@ -56,22 +56,27 @@ weight = 1
 
 # Everything below this are Site Params
 
+[params]
+  google_fonts = [
+    ["Fira Sans", "300,300i,400,400i,700,700i"]
+  ]
+
 [menu]
   [[menu.main]]
     identifier = "vscode"
-    name = "Puppet VSCode Extension"
+    name = "Puppet VS Code Extension"
     url = "https://puppet-vscode.github.io"
     weight = 1
 
   [[menu.main]]
     identifier = "editor-services"
-    name = "Editor Services"
+    name = "Puppet Editor Services"
     url = "editor-services"
     weight = 2
 
   [[menu.main]]
     identifier = "editor-syntax"
-    name = "Syntax Highlighter"
+    name = "Puppet Syntax Highlighter"
     url = "editor-syntax"
     weight = 3
 
@@ -101,7 +106,7 @@ breadcrumb_disable = false
 #  Set to true to hide the sidebar search box (the top nav search box will still be displayed if search is enabled)
 sidebar_search_disable = false
 #  Set to false if you don't want to display a logo (/assets/icons/logo.svg) in the top nav bar
-navbar_logo = false # Needs an SVG. Later.
+navbar_logo = true # Needs an SVG. Later.
 
 # Adds a H2 section titled "Feedback" to the bottom of each doc. The responses are sent to Google Analytics as events.
 # This feature depends on [services.googleAnalytics] and will be disabled if "services.googleAnalytics.id" is not set.
@@ -117,15 +122,13 @@ no = 'Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY
 # End user relevant links. These will show up on left side of footer and in the community page if you have one.
 [[params.links.user]]
         name = "Slack"
-        url = "https://slack.puppet.com/"
+        url = "https://puppetcommunity.slack.com/"
         icon = "fab fa-slack"
-        desc = "Chat with other users and developers"
+        desc = "Chat with other project developers and users"
 
 # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
-[[params.links.developer]]
-        name = "GitHub"
-        url = "https://github.com/lingua-pupuli"
-        icon = "fab fa-github"
-        desc = "Development takes place here!"
-
-
+[[params.links.user]]
+        name = "Project Maintainers"
+        url = "https://github.com/orgs/lingua-pupuli/people"
+        icon = "fa fa-user-friends"
+        desc = "Project Maintainers"

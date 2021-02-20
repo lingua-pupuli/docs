@@ -3,12 +3,18 @@ title = "Home"
 linkTitle = "Home"
 +++
 
-{{ define "main" }}
-
-{{< blocks/section color="white" >}}
-<h1>The Lingua Pupuli Project Umbrella</h1>
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+{{< blocks/section color="dark"  type="section" >}}
+<h1 class="display-1">The Lingua Pupuli Project</h1>
+<hr class="w-100 border border-light mt-2 mb-3"/>
+<div class="alert alert-light bg-dark" role="alert">
+  <h4 class="alert-heading">Language of the Puppet</h4>
+  lingua (<i>nominative</i>) : Language<br/>
+  pūpulī (<i>genitive singular</i>) : Puppet
+</div>
+When we first started to create the Puppet VS Code extension everything could be contained in a single git repository. However as time went on, it became apparent that we had out-grown a single repository, and so, we created the Lingua Pupuli project.<br/>
+<br/>
+This project is an umbrella for a community of tools; Tools to help make using, and writing, Puppet faster and easier. It is composed of three projects; VS Code Extension, Editor Services and Editor Syntax.<br/>
+<br/>
 {{% /blocks/section %}}
 
 <section id="pageContent">
@@ -52,3 +58,19 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     </div>
   </div>
 </section>
+
+
+{{< blocks/section color="dark" >}}
+{{% blocks/feature icon="fa fa-book" title="Modus Operandi" url="https://github.com/lingua-pupuli/modus-operandi" %}}
+How Lingua Pupuli operates.
+{{% /blocks/feature %}}
+
+{{% blocks/feature icon="fa fa-tasks" title="Work in Progress" url="https://github.com/orgs/lingua-pupuli/projects" %}}
+We use [Github Projects](https://github.com/orgs/lingua-pupuli/projects) to track our work.
+{{% /blocks/feature %}}
+
+{{% blocks/feature icon="fab fa-github" title="GitHub Organization" url="https://github.com/lingua-pupuli" %}}
+The Lingua Pupuli [GitHub Organization](https://github.com/lingua-pupuli).
+{{% /blocks/feature %}}
+
+{{< /blocks/section >}}

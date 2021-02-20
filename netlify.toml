@@ -1,0 +1,14 @@
+[build]
+publish = "public/lingua-pupuli"
+command ="""\
+cd themes/docsy && \
+git submodule update -f --init && \
+cd ../.. && \
+export && \
+HUGO_BASEURL=$URL/editor-services hugo --source editor-services --destination '../lingua-pupuli/static/editor-services' --environment production && \
+HUGO_BASEURL=$URL/editor-syntax hugo --source editor-syntax --destination '../lingua-pupuli/static/editor-syntax' --environment production && \
+HUGO_BASEURL=$URL hugo --source lingua-pupuli --destination '../public/lingua-pupuli' --environment production
+"""
+
+[build.environment]
+  HUGO_VERSION = "0.75.1"
