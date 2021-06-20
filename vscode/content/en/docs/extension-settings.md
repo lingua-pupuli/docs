@@ -30,6 +30,16 @@ Default: `True`
 
 An array of strings of experimental features to enable in the Puppet Editor Service
 
+#### puppet.editorService.foldingRange.enable
+
+Enable/disable syntax aware code folding provider
+
+Default: `True`
+
+#### puppet.editorService.foldingRange.showLastLine
+
+Show or hide the last line in code folding regions
+
 #### puppet.editorService.formatOnType.enable
 
 Enable/disable the Puppet document on-type formatter, for example hashrocket alignment
@@ -156,3 +166,4 @@ Default: `True`
 <!-- Begin Deprecated Settings -->
 
 <!-- End Deprecated Settings -->
+
